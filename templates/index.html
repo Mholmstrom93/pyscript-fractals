@@ -22,8 +22,12 @@
                 lang: python
     </py-config>
     <py-env>
+        - numpy
+        - sympy
         - paths:
             - /static/python/frontend/client.py
+            - /static/python/frontend/fractals.py
+            - /static/python/frontend/palettes.py 
     </py-env>
 </head>
 <body id="the_body">
@@ -32,7 +36,14 @@
         <h1><strong>PyPWA Fractals</strong>
         </h1>
     </nav>
-    <div id="fractal" class="hidden">
+    <div style="display: flex; flex-direction: column; gap: 1em; width: 600px">
+        <div id="mandelbrot">
+            <div style="text-align: center">Mandelbrot set</div>
+            <div>
+            <div class="loading"></div>
+            <canvas></canvas>
+            </div>
+        </div>
     </div>
 </main>
 
